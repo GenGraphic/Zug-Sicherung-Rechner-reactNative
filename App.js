@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image, TextInput, Keyboard, TouchableWithoutFee
 import CheckBox from 'expo-checkbox';
 import React, { useState } from 'react';
 import Rechner from './components/Rechner';
+import MenuLeft from './components/MenuLeft';
 
 
 const DismissKeybord = ({ children }) => (
@@ -19,12 +20,12 @@ export default function App() {
   const [resultKN, setResultKN] = useState('');
   const [resultFestMittle, setResultFestMittle] = useState('');
 
-  function StartCalculate() {
-    let results = [Rechner(gewicht, neigung, radsätze, isChecked)]
+  function OpenMenu() {
+    MenuLeft.styles.body.width = 100; 
+  }
 
-    
-    console.log(typeof(radsätze));
-    console.log(neigung);
+  function StartCalculate() {
+    let results = Rechner(gewicht, neigung, radsätze, isChecked)
 
     setResultKN(results[0]);
     setResultFestMittle(results[1]);
@@ -34,6 +35,10 @@ export default function App() {
     <DismissKeybord>
     
       <View style={styles.body}>
+        <View style={styles.menuLeft}>
+          <MenuLeft></MenuLeft>
+        </View>
+
         <View>
           <Text style={styles.title}>Rechner Zug Sicherung</Text>
         </View>
@@ -112,7 +117,11 @@ export default function App() {
               <Image style={styles.menuIcon} source={require('./assets/icons/user.png')}/>
             </Pressable>
             <Pressable>
-              <Image style={styles.menuIcon} source={require('./assets/icons/menu-icon.png')}/>
+              <Image 
+              style={styles.menuIcon} 
+              source={require('./assets/icons/menu-icon.png')}
+              onPress={OpenMenu}
+              />
             </Pressable>
           </View>
 
@@ -217,5 +226,11 @@ const styles = StyleSheet.create({
   menuIcon: {
     height:35,
     width: 35
+  },
+  menuLeft: {
+    position:'absolute',
+    height: '100%',
+    right: 0,
+    zIndex: 1,
   }
 });

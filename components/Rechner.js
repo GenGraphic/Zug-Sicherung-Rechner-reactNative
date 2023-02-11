@@ -38,7 +38,7 @@ const Rechner = function Rechner(gewicht, neigung, radsätze, abstellzeitBool) {
             '5000': 124,
             '6000': 149,
         },
-        "2,5": {
+        "2.5": {
             '40': 2,
             '80': 4,
             '100': 5,
@@ -92,7 +92,7 @@ const Rechner = function Rechner(gewicht, neigung, radsätze, abstellzeitBool) {
             '5000': 273,
             '6000': 327,
         },
-        "3,5": {
+        "3.5": {
             '40': 3,
             '80': 5,
             '100': 6,
@@ -146,7 +146,7 @@ const Rechner = function Rechner(gewicht, neigung, radsätze, abstellzeitBool) {
             '5000': 322,
             '6000': 386,
         },
-        "4,5": {
+        "4.5": {
             '40': 3,
             '80': 6,
             '100': 7,
@@ -200,7 +200,7 @@ const Rechner = function Rechner(gewicht, neigung, radsätze, abstellzeitBool) {
             '5000': 371,
             '6000': 445,
         },
-        "7,5": {
+        "7.5": {
             '40': 5,
             '80': 9,
             '100': 11,
@@ -254,7 +254,7 @@ const Rechner = function Rechner(gewicht, neigung, radsätze, abstellzeitBool) {
             '5000': 687,
             '6000': 825,
         },
-        "12,5": {
+        "12.5": {
             '40': 7,
             '80': 14,
             '100': 18,
@@ -1163,10 +1163,57 @@ const Rechner = function Rechner(gewicht, neigung, radsätze, abstellzeitBool) {
             }
         }
     }
+
+
+    function MatchNeigungFestmittle() {
+        if (neigungInt <= 2.5) {
+            neigungInt = 2.5;
+        }else if(neigungInt > 2.5 && neigungInt <= 3) {
+            neigungInt = 3;
+        } else if(neigungInt > 3 && neigungInt <= 3.5) {
+            neigungInt = 3.5;
+        } else if(neigungInt > 3.5 && neigungInt <= 4) {
+            neigungInt = 4;
+        } else if(neigungInt > 4 && neigungInt <= 4.5) {
+            neigungInt = 4.5;
+        } else if(neigungInt > 4.5 && neigungInt <= 5) {
+            neigungInt = 5;
+        } else if(neigungInt > 5 && neigungInt <= 5.5) {
+            neigungInt = 5.5;
+        } else if(neigungInt > 5.5 && neigungInt <= 6) {
+            neigungInt = 6;
+        } else if(neigungInt > 6 && neigungInt <= 6.5) {
+            neigungInt = 6.5;
+        } else if(neigungInt > 6.5 && neigungInt <= 7) {
+            neigungInt = 7;
+        } else if(neigungInt > 7 && neigungInt <= 8) {
+            neigungInt = 8;
+        } else if(neigungInt > 8 && neigungInt <= 9) {
+            neigungInt = 9;
+        } else if(neigungInt > 9 && neigungInt <= 10) {
+            neigungInt = 10;
+        } else if(neigungInt > 10 && neigungInt <= 11) {
+            neigungInt = 11;
+        } else if(neigungInt > 11 && neigungInt <= 12) {
+            neigungInt = 12;
+        } else if(neigungInt > 12 && neigungInt <= 13) {
+            neigungInt = 13;
+        } else if(neigungInt > 13 && neigungInt <= 14) {
+            neigungInt = 14;
+        } else if(neigungInt > 14 && neigungInt <= 15) {
+            neigungInt = 15;
+        } else if(neigungInt > 15 && neigungInt <= 20) {
+            neigungInt = 20;
+        }
+    } 
+    function RechnerFestmittle() {
+        MatchNeigungFestmittle();
+        resultFestMittle = TabelleFestmittle[neigungInt.toLocaleString()][radsätze];
+    }
     
 
     RechnerKn();
-    
+    RechnerFestmittle();
     return [
         resultKN, 
         resultFestMittle
