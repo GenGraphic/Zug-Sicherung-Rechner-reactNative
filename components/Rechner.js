@@ -949,158 +949,223 @@ const Rechner = function Rechner(gewicht, neigung, radsätze, abstellzeitBool) {
         }
     }
 
+    function MatchNeigung() {
+        if (neigungInt <= 2.5) {
+            neigungInt = 2.5;
+        }else if(neigungInt > 2.5 && neigungInt <= 3) {
+            neigungInt = 3;
+        } else if(neigungInt > 3 && neigungInt <= 3.5) {
+            neigungInt = 3.5;
+        } else if(neigungInt > 3.5 && neigungInt <= 4) {
+            neigungInt = 4;
+        } else if(neigungInt > 4 && neigungInt <= 4.5) {
+            neigungInt = 4.5;
+        } else if(neigungInt > 4.5 && neigungInt <= 5) {
+            neigungInt = 5;
+        } else if(neigungInt > 5 && neigungInt <= 7.5) {
+            neigungInt = 7.5;
+        } else if(neigungInt > 7.5 && neigungInt <= 10) {
+            neigungInt = 10;
+        } else if(neigungInt > 10 && neigungInt <= 12.5) {
+            neigungInt = 12.5;
+        } else if(neigungInt > 12.5 && neigungInt <= 15) {
+            neigungInt = 15;
+        } else if(neigungInt > 15 && neigungInt <= 20) {
+            neigungInt = 20;
+        } else if(neigungInt > 20 && neigungInt <= 25) {
+            neigungInt = 25;
+        } else if(neigungInt > 25 && neigungInt <= 26) {
+            neigungInt = 26;
+        } else if(neigungInt > 26 && neigungInt <= 30) {
+            neigungInt = 30;
+        } else if(neigungInt > 30 && neigungInt <= 35) {
+            neigungInt = 35;
+        } else if(neigungInt > 35 && neigungInt <= 40) {
+            neigungInt = 40;
+        }
+    } 
 
-    if(gewichtInt <= 40) {   
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['40'];
-        } else {
-            resultKN = TabelleKn [neigung]['40'];
-        }
-    } else if(gewichtInt <= 80) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['80'];
-        } else {
-            resultKN = TabelleKn [neigung]['80'];
-        }
-    } else if(gewichtInt <= 100) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['100'];
-        } else {
-            resultKN = TabelleKn [neigung]['100'];
-        }
-    } else if(gewichtInt <= 120) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['120'];
-        } else {
-            resultKN = TabelleKn [neigung]['120'];
-        }
-    } else if(gewichtInt <= 160) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['160'];
-        } else {
-            resultKN = TabelleKn [neigung]['160'];
-        }
-    } else if(gewichtInt <= 200) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['200'];
-        } else {
-            resultKN = TabelleKn [neigung]['200'];
-        }
-    } else if(gewichtInt <= 300) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['300'];
-        } else {
-            resultKN = TabelleKn [neigung]['300'];
-        }
-    } else if(gewichtInt <= 400) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['400'];
-        } else {
-            resultKN = TabelleKn [neigung]['400'];
-        }
-    } else if(gewichtInt <= 600) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['600'];
-        } else {
-            resultKN = TabelleKn [neigung]['600'];
-        }
-    } else if(gewichtInt <= 800) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['800'];
-        } else {
-            resultKN = TabelleKn [neigung]['800'];
-        }
-    } else if(gewichtInt <= 1000) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['1000'];
-        } else {
-            resultKN = TabelleKn [neigung]['1000'];
-        }
-    } else if(gewichtInt <= 1200) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['1200'];
-        } else {
-            resultKN = TabelleKn [neigung]['1200'];
-        }
-    } else if(gewichtInt <= 1400) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['1400'];
-        } else {
-            resultKN = TabelleKn [neigung]['1400'];
-        }
-    } else if(gewichtInt <= 1600) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['1600'];
-        } else {
-            resultKN = TabelleKn [neigung]['1600'];
-        }
-    } else if(gewichtInt <= 1800) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['1800'];
-        } else {
-            resultKN = TabelleKn [neigung]['1800'];
-        }
-    } else if(gewichtInt <= 2000) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['2000'];
-        } else {
-            resultKN = TabelleKn [neigung]['2000'];
-        }
-    } else if(gewichtInt <= 2200) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['2200'];
-        } else {
-            resultKN = TabelleKn [neigung]['2200'];
-        }
-    } else if(gewichtInt <= 2400) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['2400'];
-        } else {
-            resultKN = TabelleKn [neigung]['2400'];
-        }
-    } else if(gewichtInt <= 2600) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['2600'];
-        } else {
-            resultKN = TabelleKn [neigung]['2600'];
-        }
-    } else if(gewichtInt <= 3000) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['3000'];
-        } else {
-            resultKN = TabelleKn [neigung]['3000'];
-        }
-    } else if(gewichtInt <= 3500) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['3500'];
-        } else {
-            resultKN = TabelleKn [neigung]['3500'];
-        }
-    } else if(gewichtInt <= 4000) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['4000'];
-        } else {
-            resultKN = TabelleKn [neigung]['4000'];
-        }
-    } else if(gewichtInt <= 4500) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['4500'];
-        } else {
-            resultKN = TabelleKn [neigung]['4500'];
-        }
-    } else if(gewichtInt <= 5000) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['5000'];
-        } else {
-            resultKN = TabelleKn [neigung]['5000'];
-        }
-    } else if(gewichtInt <= 6000) {
-        if(abstellzeitLess && neigungInt <= 2.5) {
-            resultKN = TabelleKn['2,5<24']['6000'];
-        } else {
-            resultKN = TabelleKn [neigung]['6000'];
+    //this function calculate the result for Kn
+    function RechnerKn() {
+        if(gewichtInt <= 40) {   
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['40'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['40'];
+            }
+        } else if(gewichtInt <= 80) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['80'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['80'];
+            }
+        } else if(gewichtInt <= 100) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['100'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['100'];
+            }
+        } else if(gewichtInt <= 120) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['120'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['120'];
+            }
+        } else if(gewichtInt <= 160) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['160'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['160'];
+            }
+        } else if(gewichtInt <= 200) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['200'];
+            } else {
+                resultKN = TabelleKn [neigungInt.toString()]['200'];
+            }
+        } else if(gewichtInt <= 300) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['300'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['300'];
+            }
+        } else if(gewichtInt <= 400) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['400'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['400'];
+            }
+        } else if(gewichtInt <= 600) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['600'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['600'];
+            }
+        } else if(gewichtInt <= 800) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['800'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['800'];
+            }
+        } else if(gewichtInt <= 1000) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['1000'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['1000'];
+            }
+        } else if(gewichtInt <= 1200) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['1200'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['1200'];
+            }
+        } else if(gewichtInt <= 1400) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['1400'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn[neigungInt.toString()]['1400'];
+            }
+        } else if(gewichtInt <= 1600) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['1600'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn[neigungInt.toString()]['1600'];
+            }
+        } else if(gewichtInt <= 1800) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['1800'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['1800'];
+            }
+        } else if(gewichtInt <= 2000) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['2000'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['2000'];
+            }
+        } else if(gewichtInt <= 2200) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['2200'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['2200'];
+            }
+        } else if(gewichtInt <= 2400) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['2400'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['2400'];
+            }
+        } else if(gewichtInt <= 2600) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['2600'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['2600'];
+            }
+        } else if(gewichtInt <= 3000) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['3000'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['3000'];
+            }
+        } else if(gewichtInt <= 3500) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['3500'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['3500'];
+            }
+        } else if(gewichtInt <= 4000) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['4000'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['4000'];
+            }
+        } else if(gewichtInt <= 4500) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['4500'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['4500'];
+            }
+        } else if(gewichtInt <= 5000) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['5000'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['5000'];
+            }
+        } else if(gewichtInt <= 6000) {
+            if(abstellzeitLess && neigungInt <= 2.5) {
+                resultKN = TabelleKn['2,5<24']['6000'];
+            } else {
+                MatchNeigung();
+                resultKN = TabelleKn [neigungInt.toString()]['6000'];
+            }
         }
     }
+    
+
+    RechnerKn();
     
     return [
         resultKN, 

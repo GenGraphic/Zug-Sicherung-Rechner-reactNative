@@ -23,11 +23,11 @@ export default function App() {
     let results = [Rechner(gewicht, neigung, radsätze, isChecked)]
 
     
-    console.log(isChecked);
+    console.log(typeof(radsätze));
     console.log(neigung);
 
     setResultKN(results[0]);
-    setResultFestMittle(results[0]);
+    setResultFestMittle(results[1]);
   }
 
   return (

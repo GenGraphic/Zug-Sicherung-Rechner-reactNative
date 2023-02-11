@@ -11,17 +11,17 @@
     "@expo/metro-config": "^0.5.2",
     "@react-native-community/checkbox": "^0.5.14",
     "@realm/react": "^0.4.3",
-    "expo": "^47.0.0",
+    "expo": "^47.0.13",
     "expo-checkbox": "~2.2.2",
     "expo-dev-client": "~2.0.1",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",
+    "expo-updates": "~0.15.6",
     "firebase": "^9.17.1",
     "react": "18.1.0",
     "react-native": "0.70.5",
     "react-native-sqlite-storage": "^6.0.1",
-    "realm": "^11.4.0",
-    "expo-updates": "~0.15.6"
+    "realm": "^11.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
