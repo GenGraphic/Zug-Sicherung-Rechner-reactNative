@@ -126,7 +126,6 @@ const styles = StyleSheet.create({
     },
     scrollBody: {
       flex:1,
-      display: 'felx',
       alignItems: 'center',
       justifyContent: 'space-around'
     },  
@@ -189,7 +188,6 @@ const styles = StyleSheet.create({
       height: 200,
       width: '90%',
       borderRadius: 5,
-      display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-around',
       alignItems: 'center',

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+import Meldezettel from "../components/Meldezettel";
 
 
 const RechnerScreen = ({navigation}) => {
@@ -7,8 +8,11 @@ const RechnerScreen = ({navigation}) => {
         <View style={styles.body}>
             <Text style={styles.title}>Daten</Text>
 
-            <ScrollView>
-                
+            <ScrollView contentContainerStyle={styles.zettelCont}>
+                <Meldezettel></Meldezettel>
+                <Meldezettel></Meldezettel>
+                <Meldezettel></Meldezettel>
+                <Meldezettel></Meldezettel>
             </ScrollView>
         </View>
     )
@@ -26,5 +30,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 50,
         fontSize: 26
+    },
+    zettelCont: {
+        alignItems: 'center',
+
     }
+
 })
