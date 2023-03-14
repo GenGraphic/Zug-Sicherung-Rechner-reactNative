@@ -176,7 +176,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         borderColor: '#FFB454',
         borderWidth: 1,
-        padding: 5,
       },
     textBtn: {
       color: '#EDF2F4',
